@@ -88,9 +88,8 @@ module.exports ={
         })  
     },
     addDepartment: function(connections, start){
-
       addDepartment().then(function(userInput){
-        connections.query(`insert INTO department (name)VALUES("${userInput.deptName}")` ,function(error, data){
+        connections.query(`INSERT INTO department (name)VALUES("${userInput.deptName}")` ,function(error, data){
             console.table(data)
             start()
         })

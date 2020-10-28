@@ -33,17 +33,17 @@ VALUES
 ("Sean", "Cassidy", 2),
 ("Bruce", "Wayne", 5);
 
-INSERT INTO employee (first_name, last_name, role_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
-("Leslie", "Knope", 6),
-("Ann", "Perkins", 1),
-("Mark", "Brendanawicz", 3),
-("Tom", "Haverford", 1),
-("Ron", "Swanson", 5),
-("Apirl", "Ludgate", 6),
-("Andy", "Dwyer", 9),
-("Ben", "Wyatt", 3),
-("Chris", "Traeger", 3),
-("Perry", "Gergich", 1);
+("Leslie", "Knope", 6, 1),
+("Ann", "Perkins", 1, 2),
+("Mark", "Brendanawicz", 3, 3),
+("Tom", "Haverford", 1, 4),
+("Ron", "Swanson", 5, 1),
+("Apirl", "Ludgate", 6, 2),
+("Andy", "Dwyer", 9, 3),
+("Ben", "Wyatt", 3, 4),
+("Chris", "Traeger", 3, 1),
+("Perry", "Gergich", 1, 2);
 
 SELECT * FROM employee;
