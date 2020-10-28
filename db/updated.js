@@ -4,12 +4,14 @@ const inquirer = require('inquirer');
 function updateRole(){
     return inquirer.prompt([
         {
+
             name: "changeID",
             type: "input",
             message: "Change ID?"
 
         },
         {
+
             name: "changeRoleID",
             type: "input",
             message: "Change Role ID?"
@@ -17,6 +19,7 @@ function updateRole(){
         }
     ])
 }
+
 module.exports = {
     updateRole: function(connections, start){
         updateRole().then(function(userInput){
@@ -25,6 +28,5 @@ module.exports = {
                 start()
             })
         })
-        
     },
 };

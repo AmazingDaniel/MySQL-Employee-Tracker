@@ -45,7 +45,6 @@ function addEmployee() {
             type: "input",
             message: "Employee's first name?",
             
-            
         },
         {
 
@@ -53,7 +52,6 @@ function addEmployee() {
             type: "input",
             message: "Employee's last name?",
 
-            
         },
         {
         
@@ -80,7 +78,6 @@ module.exports ={
                 start()
             })
         })
-        
     },
     addRole: function(connections, start){
         addRole().then(function(userInput){
@@ -88,8 +85,7 @@ module.exports ={
                 console.table(data)
                 start()
             })
-        })
-        
+        })  
     },
     addDepartment: function(connections, start){
 
@@ -99,8 +95,5 @@ module.exports ={
             start()
         })
       })
-
-
-        
     },
 }
