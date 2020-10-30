@@ -1,6 +1,5 @@
 USE employee_DB;
 
--- DEPARTMENTS
 INSERT INTO department (name)
 VALUES 
 ("Production"), 
@@ -13,7 +12,6 @@ VALUES
 SELECT * FROM department;
 
 
--- ROLES
 INSERT INTO role (title, salary, department_id)
 VALUES 
 ("Administrator", 200000.00, 1),
@@ -28,20 +26,24 @@ VALUES
 
 SELECT * FROM role;
 
-
--- EMPLOYEES
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES 
+("Oliver", "John", 1),
+("Brian", "Braddock", 4),
+("Sean", "Cassidy", 2),
+("Bruce", "Wayne", 5);
 
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES 
-("Leslie", "Knope", 1),
-("Ann", "Perkins", 2),
+("Leslie", "Knope", 6),
+("Ann", "Perkins", 1),
 ("Mark", "Brendanawicz", 3),
-("Tom", "Haverford", 4),
+("Tom", "Haverford", 1),
 ("Ron", "Swanson", 5),
 ("Apirl", "Ludgate", 6),
-("Andy", "Dwyer", 7),
-("Ben", "Wyatt", 8),
-("Chris", "Traeger", 9),
+("Andy", "Dwyer", 9),
+("Ben", "Wyatt", 3),
+("Chris", "Traeger", 3),
 ("Perry", "Gergich", 1);
 
 SELECT * FROM employee;

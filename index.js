@@ -1,15 +1,12 @@
-// External packages
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 
-// Internal modules
-// View only queries
 const view = require('./db/viewed.js');
-// Adding new employees or roles
+
 const add = require('./db/added.js');
-// Updating and deleting existing data
+
 const update = require('./db/updated.js');
-const ctable= require("console.table")
+const cTable= require("console.table")
 
 const connections = mysql.createConnection({
     host: "localhost",
@@ -47,17 +44,14 @@ function start() {
                     view.viewAllEmployees(connections, start);
                     break;
 
-        
                 case "Add Employee":
                     add.addEmployee(connections, start);
                     break;
 
-                c 
                 case "Update Employee Role":
                     update.updateRole(connections, start);
                     break;
 
-                
                 case "View All Roles":
                     view.viewRoles(connections, start);
                     break;
@@ -66,7 +60,6 @@ function start() {
                     add.addRole(connections, start);
                     break;
 
-              
                 case "View All Departments":
                     view.viewDepartments(connections, start);
                     break;
@@ -77,4 +70,49 @@ function start() {
  
             }
         })
+};
+
+module.exports ={
+    addEmployee: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    },
+    addRole: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    },
+    addDepartment: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    },
+    updateRole: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    },
+    viewAllDepartments: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    },
+    viewAllEmployees: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        }) 
+    },
+    viewAllRoles: function(connections, start){
+        connections.query("SELECT * FROM employee", function(error, data){
+            console.table(data)
+            start()
+        })
+    }
 }
