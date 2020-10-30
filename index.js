@@ -53,7 +53,7 @@ function start() {
                     break;
 
                 case "View All Roles":
-                    view.viewRoles(connections, start);
+                    view.viewAllRoles(connections, start);
                     break;
 
                 case "Add Role":
@@ -61,7 +61,7 @@ function start() {
                     break;
 
                 case "View All Departments":
-                    view.viewDepartments(connections, start);
+                    view.viewAllDepartments(connections, start);
                     break;
 
                 case "Add Department":
@@ -72,47 +72,3 @@ function start() {
         })
 };
 
-module.exports ={
-    addEmployee: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    },
-    addRole: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    },
-    addDepartment: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    },
-    updateRole: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    },
-    viewAllDepartments: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    },
-    viewAllEmployees: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        }) 
-    },
-    viewAllRoles: function(connections, start){
-        connections.query("SELECT * FROM employee", function(error, data){
-            console.table(data)
-            start()
-        })
-    }
-}
