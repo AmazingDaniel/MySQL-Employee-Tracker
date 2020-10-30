@@ -43,7 +43,7 @@ function addEmployee() {
 
             name: "firstName",
             type: "input",
-            message: "What is the employee's first name?",
+            message: "Employee's first name?",
             
             
         },
@@ -51,7 +51,7 @@ function addEmployee() {
 
             name: "lastName",
             type: "input",
-            message: "What is the employee's last name?",
+            message: "Employee's last name?",
 
             
         },
@@ -59,7 +59,7 @@ function addEmployee() {
         
             name: "roleID",
             type: "input",
-            message: "What is the employee's role ID?"
+            message: "What is the employee's ID?"
 
         },
         {
